@@ -1,0 +1,40 @@
+{% extends 'restaurant/base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center mt-3">
+            <h1>Order ID: {{ order.pk }}</h1>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-12 mt-5">
+            <h3>Student Information:</h3>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6  mt-5">
+            <p><span style="font-weight: 400;">Name:</span> {{ order.name }}</p>
+        </div>
+
+        <div class="col-md-6">
+            <p class="mt-3">
+                {% if order.is_paid %}
+                <p><i style="color: green;" class="fas fa-check"></i><span class="pl-2">Order Has Been Paid!</span></p>
+                {% else %}
+                <p><i style="color: red;" class="fas fa-times"></i><span class="pl-2">Order Has Not Been Paid</span></p>
+                {% endif %}</p>
+                {% if order.ordergiven %}
+                <p><i style="color: green;" class="fas fa-check"></i><span class="pl-2">Order Done!</span></p>
+                {% else %}
+                <form method="POST">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-outline-success">Mark as Done</button>
+                </form>
+                {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

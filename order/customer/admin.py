@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import MenuItem,Order,Category
+from .models import MenuItem,Orderr,Category
 # Register your models here.
 
 admin.site.register(MenuItem)
-admin.site.register(Order)
+admin.site.register(Orderr)
 admin.site.register(Category)

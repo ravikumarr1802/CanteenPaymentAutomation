@@ -23,4 +23,5 @@ from django.urls import include
 urlpatterns = [
     path('',include('customer.urls')),
     path('admin/', admin.site.urls),
-] + static(settings.MEDIA,document_root = settings.MEDIA_ROOT)
+    path('',include('restaurant.urls')),
+] + static('/',document_root = settings.MEDIA_ROOT)

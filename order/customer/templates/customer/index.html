@@ -1,18 +1,17 @@
-{% extends "customer/base.html" %}
-{% block content %}
+{% extends 'customer/base.html' %}
 
-<div>
-    <div>
-        <div>
-            <h1> CANTEEN FOOD </h1>
+{% block content %}
+<div class="container md-2">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8 offset-md-1 p-4 text-center">
+            <h1>Canteen Food Service</h1>
         </div>
     </div>
-    <div>
-        <div>
-            <h2> PLACE AN ORDER! </h2>
-            <button> ORDER </button>
+    <div class="row justify-content-center mt-1">
+        <div class="card bg-dark col-md-5 offset-md-1 p-4 text-center text-white">
+            <h2>Place an Order!</h2>
+            <a href="{% url 'order' %}" class="btn btn-outline-primary">Order Now!</a>
         </div>
     </div>
 </div>
-
 {% endblock content %}
