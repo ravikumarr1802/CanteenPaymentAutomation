@@ -55,7 +55,7 @@
 ---
 ## 🧑‍💻 Team Credits
 
-> Built with ❤️ by a passionate team from GRIET - AIML 2026
+> Built with dedication by a passionate team from GRIET - AIML 2026
 
 <table>
   <tr>
